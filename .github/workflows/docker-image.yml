@@ -2,7 +2,7 @@ name: Docker Image
 
 on:
   push:
-    branches: [main]
+    branches: [linzeliang]
   schedule:
     # Runs "every Monday" (see https://crontab.guru)
     - cron: '0 0 * * MON'
@@ -66,9 +66,9 @@ jobs:
           platforms: linux/amd64, linux/arm64
           push: true
           tags: |
-            fredliang/derper:${{ env.TAILSCALE_VERSION }}
-            fredliang/derper:latest
-            fredliang/derper:${{ github.sha }}
+            linzeliang1222/derper:${{ env.TAILSCALE_VERSION }}
+            linzeliang1222/derper:latest
+            linzeliang1222/derper:${{ github.sha }}
             ghcr.io/${{ github.actor }}/derper:${{ env.TAILSCALE_VERSION }}
             ghcr.io/${{ github.actor }}/derper:latest
           build-args: |
